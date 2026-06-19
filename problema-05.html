@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Problema 05 | Examen 02</title>
+  <meta name="description" content="Problema 05 | Examen 02" />
+  <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Problema 05 | Examen 02" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Problema 05 | Examen 02" />
+  
+  
+  
+
+<meta name="author" content="John Rodríguez" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="problema-04.html"/>
+<link rel="next" href="problema-06.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="estilo.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="index.html#section" id="toc-section"></a></li>
+<li class="chapter" data-level="" data-path="problema-01.html"><a href="problema-01.html"><i class="fa fa-check"></i>Problema 01</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-01.html"><a href="problema-01.html#enunciado"><i class="fa fa-check"></i>0. Enunciado</a></li>
+<li class="chapter" data-level="" data-path="problema-01.html"><a href="problema-01.html#qu%C3%A9-se-est%C3%A1-evaluando-alineaci%C3%B3n-soa"><i class="fa fa-check"></i>1. Qué se está evaluando (alineación SOA)</a></li>
+<li class="chapter" data-level="" data-path="problema-01.html"><a href="problema-01.html#marco-conceptual"><i class="fa fa-check"></i>2. Marco conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-01.html"><a href="problema-01.html#datos-y-supuestos"><i class="fa fa-check"></i>3. Datos y supuestos</a></li>
+<li class="chapter" data-level="" data-path="problema-01.html"><a href="problema-01.html#estrategia-de-soluci%C3%B3n"><i class="fa fa-check"></i>4. Estrategia de solución</a></li>
+<li class="chapter" data-level="" data-path="problema-01.html"><a href="problema-01.html#soluci%C3%B3n-paso-a-paso-detallada"><i class="fa fa-check"></i>5. Solución paso a paso (detallada)</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-01.html"><a href="problema-01.html#paso-1.-calcular-el-factor-volume-weighted-de-development-year-0-a-1"><i class="fa fa-check"></i>Paso 1. Calcular el factor volume-weighted de development year 0 a 1</a></li>
+<li class="chapter" data-level="" data-path="problema-01.html"><a href="problema-01.html#paso-2.-calcular-el-factor-volume-weighted-de-development-year-1-a-2"><i class="fa fa-check"></i>Paso 2. Calcular el factor volume-weighted de development year 1 a 2</a></li>
+<li class="chapter" data-level="" data-path="problema-01.html"><a href="problema-01.html#paso-3.-usar-la-reserva-conocida-de-ay2-para-determinar-beta"><i class="fa fa-check"></i>Paso 3. Usar la reserva conocida de AY2 para determinar <span class="math inline">\(\beta\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-01.html"><a href="problema-01.html#paso-4.-obtener-alpha-usando-alphabeta1"><i class="fa fa-check"></i>Paso 4. Obtener <span class="math inline">\(\alpha\)</span> usando <span class="math inline">\(\alpha\beta=1\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-01.html"><a href="problema-01.html#paso-5.-calcular-el-ultimate-estimado-para-ay3"><i class="fa fa-check"></i>Paso 5. Calcular el ultimate estimado para AY3</a></li>
+<li class="chapter" data-level="" data-path="problema-01.html"><a href="problema-01.html#paso-6.-calcular-la-reserva-total-de-ay3"><i class="fa fa-check"></i>Paso 6. Calcular la reserva total de AY3</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-01.html"><a href="problema-01.html#verificaci%C3%B3n-e-interpretaci%C3%B3n-del-resultado"><i class="fa fa-check"></i>6. Verificación e interpretación del resultado</a></li>
+<li class="chapter" data-level="" data-path="problema-01.html"><a href="problema-01.html#conexi%C3%B3n-conceptual"><i class="fa fa-check"></i>7. Conexión conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-01.html"><a href="problema-01.html#errores-comunes-con-explicaci%C3%B3n-del-porqu%C3%A9"><i class="fa fa-check"></i>8. Errores comunes (con explicación del porqué)</a></li>
+<li class="chapter" data-level="" data-path="problema-01.html"><a href="problema-01.html#respuesta-final"><i class="fa fa-check"></i>9. Respuesta final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-02.html"><a href="problema-02.html"><i class="fa fa-check"></i>Problema 02</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-02.html"><a href="problema-02.html#enunciado-1"><i class="fa fa-check"></i>0. Enunciado</a></li>
+<li class="chapter" data-level="" data-path="problema-02.html"><a href="problema-02.html#qu%C3%A9-se-est%C3%A1-evaluando-alineaci%C3%B3n-soa-1"><i class="fa fa-check"></i>1. Qué se está evaluando (alineación SOA)</a></li>
+<li class="chapter" data-level="" data-path="problema-02.html"><a href="problema-02.html#marco-conceptual-1"><i class="fa fa-check"></i>2. Marco conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-02.html"><a href="problema-02.html#datos-y-supuestos-1"><i class="fa fa-check"></i>3. Datos y supuestos</a></li>
+<li class="chapter" data-level="" data-path="problema-02.html"><a href="problema-02.html#estrategia-de-soluci%C3%B3n-1"><i class="fa fa-check"></i>4. Estrategia de solución</a></li>
+<li class="chapter" data-level="" data-path="problema-02.html"><a href="problema-02.html#soluci%C3%B3n-paso-a-paso-detallada-1"><i class="fa fa-check"></i>5. Solución paso a paso (detallada)</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-02.html"><a href="problema-02.html#paso-1.-definir-el-evento-de-pago-del-reasegurador"><i class="fa fa-check"></i>Paso 1. Definir el evento de pago del reasegurador</a></li>
+<li class="chapter" data-level="" data-path="problema-02.html"><a href="problema-02.html#paso-2.-calcular-la-media-agregada"><i class="fa fa-check"></i>Paso 2. Calcular la media agregada</a></li>
+<li class="chapter" data-level="" data-path="problema-02.html"><a href="problema-02.html#paso-3.-calcular-la-varianza-agregada-incluyendo-covarianzas"><i class="fa fa-check"></i>Paso 3. Calcular la varianza agregada incluyendo covarianzas</a></li>
+<li class="chapter" data-level="" data-path="problema-02.html"><a href="problema-02.html#paso-4.-estandarizar-la-normal"><i class="fa fa-check"></i>Paso 4. Estandarizar la normal</a></li>
+<li class="chapter" data-level="" data-path="problema-02.html"><a href="problema-02.html#paso-5.-comparar-con-las-opciones"><i class="fa fa-check"></i>Paso 5. Comparar con las opciones</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-02.html"><a href="problema-02.html#verificaci%C3%B3n-e-interpretaci%C3%B3n-del-resultado-1"><i class="fa fa-check"></i>6. Verificación e interpretación del resultado</a></li>
+<li class="chapter" data-level="" data-path="problema-02.html"><a href="problema-02.html#conexi%C3%B3n-conceptual-1"><i class="fa fa-check"></i>7. Conexión conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-02.html"><a href="problema-02.html#errores-comunes-con-explicaci%C3%B3n-del-porqu%C3%A9-1"><i class="fa fa-check"></i>8. Errores comunes (con explicación del porqué)</a></li>
+<li class="chapter" data-level="" data-path="problema-02.html"><a href="problema-02.html#respuesta-final-1"><i class="fa fa-check"></i>9. Respuesta final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-03.html"><a href="problema-03.html"><i class="fa fa-check"></i>Problema 03</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-03.html"><a href="problema-03.html#enunciado-2"><i class="fa fa-check"></i>0. Enunciado</a></li>
+<li class="chapter" data-level="" data-path="problema-03.html"><a href="problema-03.html#qu%C3%A9-se-est%C3%A1-evaluando-alineaci%C3%B3n-soa-2"><i class="fa fa-check"></i>1. Qué se está evaluando (alineación SOA)</a></li>
+<li class="chapter" data-level="" data-path="problema-03.html"><a href="problema-03.html#marco-conceptual-2"><i class="fa fa-check"></i>2. Marco conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-03.html"><a href="problema-03.html#datos-y-supuestos-2"><i class="fa fa-check"></i>3. Datos y supuestos</a></li>
+<li class="chapter" data-level="" data-path="problema-03.html"><a href="problema-03.html#estrategia-de-soluci%C3%B3n-2"><i class="fa fa-check"></i>4. Estrategia de solución</a></li>
+<li class="chapter" data-level="" data-path="problema-03.html"><a href="problema-03.html#soluci%C3%B3n-paso-a-paso-detallada-2"><i class="fa fa-check"></i>5. Solución paso a paso (detallada)</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-03.html"><a href="problema-03.html#paso-1.-interpretar-a_xoverlinen1"><i class="fa fa-check"></i>Paso 1. Interpretar <span class="math inline">\(A_{x:\overline{n}|}^{1}\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-03.html"><a href="problema-03.html#paso-2.-calcular-el-seguro-temporal-1a_xoverlinen"><i class="fa fa-check"></i>Paso 2. Calcular el seguro temporal <span class="math inline">\({}^{1}A_{x:\overline{n}|}\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-03.html"><a href="problema-03.html#paso-3.-calcular-el-endowment-insurance-a_xoverlinen"><i class="fa fa-check"></i>Paso 3. Calcular el endowment insurance <span class="math inline">\(A_{x:\overline{n}|}\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-03.html"><a href="problema-03.html#paso-4.-calcular-la-tasa-de-descuento-d"><i class="fa fa-check"></i>Paso 4. Calcular la tasa de descuento <span class="math inline">\(d\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-03.html"><a href="problema-03.html#paso-5.-calcular-la-anualidad-anticipada-temporal-ddota_xoverlinen"><i class="fa fa-check"></i>Paso 5. Calcular la anualidad anticipada temporal <span class="math inline">\(\ddot{a}_{x:\overline{n}|}\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-03.html"><a href="problema-03.html#paso-6.-convertir-de-anualidad-anticipada-a-anualidad-inmediata"><i class="fa fa-check"></i>Paso 6. Convertir de anualidad anticipada a anualidad inmediata</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-03.html"><a href="problema-03.html#verificaci%C3%B3n-e-interpretaci%C3%B3n-del-resultado-2"><i class="fa fa-check"></i>6. Verificación e interpretación del resultado</a></li>
+<li class="chapter" data-level="" data-path="problema-03.html"><a href="problema-03.html#conexi%C3%B3n-conceptual-2"><i class="fa fa-check"></i>7. Conexión conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-03.html"><a href="problema-03.html#errores-comunes-con-explicaci%C3%B3n-del-porqu%C3%A9-2"><i class="fa fa-check"></i>8. Errores comunes (con explicación del porqué)</a></li>
+<li class="chapter" data-level="" data-path="problema-03.html"><a href="problema-03.html#respuesta-final-2"><i class="fa fa-check"></i>9. Respuesta final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-04.html"><a href="problema-04.html"><i class="fa fa-check"></i>Problema 04</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-04.html"><a href="problema-04.html#enunciado-3"><i class="fa fa-check"></i>0. Enunciado</a></li>
+<li class="chapter" data-level="" data-path="problema-04.html"><a href="problema-04.html#qu%C3%A9-se-est%C3%A1-evaluando-alineaci%C3%B3n-soa-3"><i class="fa fa-check"></i>1. Qué se está evaluando (alineación SOA)</a></li>
+<li class="chapter" data-level="" data-path="problema-04.html"><a href="problema-04.html#marco-conceptual-3"><i class="fa fa-check"></i>2. Marco conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-04.html"><a href="problema-04.html#datos-y-supuestos-3"><i class="fa fa-check"></i>3. Datos y supuestos</a></li>
+<li class="chapter" data-level="" data-path="problema-04.html"><a href="problema-04.html#estrategia-de-soluci%C3%B3n-3"><i class="fa fa-check"></i>4. Estrategia de solución</a></li>
+<li class="chapter" data-level="" data-path="problema-04.html"><a href="problema-04.html#soluci%C3%B3n-paso-a-paso-detallada-3"><i class="fa fa-check"></i>5. Solución paso a paso (detallada)</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-04.html"><a href="problema-04.html#paso-1.-expresar-las-variables-aleatorias-de-valor-presente"><i class="fa fa-check"></i>Paso 1. Expresar las variables aleatorias de valor presente</a></li>
+<li class="chapter" data-level="" data-path="problema-04.html"><a href="problema-04.html#paso-2.-calcular-ez_1"><i class="fa fa-check"></i>Paso 2. Calcular <span class="math inline">\(E[Z_1]\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-04.html"><a href="problema-04.html#paso-3.-calcular-ez_2"><i class="fa fa-check"></i>Paso 3. Calcular <span class="math inline">\(E[Z_2]\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-04.html"><a href="problema-04.html#paso-4.-calcular-ez_1z_2"><i class="fa fa-check"></i>Paso 4. Calcular <span class="math inline">\(E[Z_1Z_2]\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-04.html"><a href="problema-04.html#paso-5.-calcular-la-covarianza"><i class="fa fa-check"></i>Paso 5. Calcular la covarianza</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-04.html"><a href="problema-04.html#verificaci%C3%B3n-e-interpretaci%C3%B3n-del-resultado-3"><i class="fa fa-check"></i>6. Verificación e interpretación del resultado</a></li>
+<li class="chapter" data-level="" data-path="problema-04.html"><a href="problema-04.html#conexi%C3%B3n-conceptual-3"><i class="fa fa-check"></i>7. Conexión conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-04.html"><a href="problema-04.html#errores-comunes-con-explicaci%C3%B3n-del-porqu%C3%A9-3"><i class="fa fa-check"></i>8. Errores comunes (con explicación del porqué)</a></li>
+<li class="chapter" data-level="" data-path="problema-04.html"><a href="problema-04.html#respuesta-final-3"><i class="fa fa-check"></i>9. Respuesta final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-05.html"><a href="problema-05.html"><i class="fa fa-check"></i>Problema 05</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-05.html"><a href="problema-05.html#enunciado-4"><i class="fa fa-check"></i>0. Enunciado</a></li>
+<li class="chapter" data-level="" data-path="problema-05.html"><a href="problema-05.html#qu%C3%A9-se-est%C3%A1-evaluando-alineaci%C3%B3n-soa-4"><i class="fa fa-check"></i>1. Qué se está evaluando (alineación SOA)</a></li>
+<li class="chapter" data-level="" data-path="problema-05.html"><a href="problema-05.html#marco-conceptual-4"><i class="fa fa-check"></i>2. Marco conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-05.html"><a href="problema-05.html#datos-y-supuestos-4"><i class="fa fa-check"></i>3. Datos y supuestos</a></li>
+<li class="chapter" data-level="" data-path="problema-05.html"><a href="problema-05.html#estrategia-de-soluci%C3%B3n-4"><i class="fa fa-check"></i>4. Estrategia de solución</a></li>
+<li class="chapter" data-level="" data-path="problema-05.html"><a href="problema-05.html#soluci%C3%B3n-paso-a-paso-detallada-4"><i class="fa fa-check"></i>5. Solución paso a paso (detallada)</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-05.html"><a href="problema-05.html#paso-1.-determinar-el-a%C3%B1o-de-pago-del-beneficio"><i class="fa fa-check"></i>Paso 1. Determinar el año de pago del beneficio</a></li>
+<li class="chapter" data-level="" data-path="problema-05.html"><a href="problema-05.html#paso-2.-plantear-la-p%C3%A9rdida-bruta-realizada"><i class="fa fa-check"></i>Paso 2. Plantear la pérdida bruta realizada</a></li>
+<li class="chapter" data-level="" data-path="problema-05.html"><a href="problema-05.html#paso-3.-calcular-la-esperanza-de-la-p%C3%A9rdida"><i class="fa fa-check"></i>Paso 3. Calcular la esperanza de la pérdida</a></li>
+<li class="chapter" data-level="" data-path="problema-05.html"><a href="problema-05.html#paso-4.-confirmaci%C3%B3n-con-la-forma-de-anualidad"><i class="fa fa-check"></i>Paso 4. Confirmación con la forma de anualidad</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-05.html"><a href="problema-05.html#verificaci%C3%B3n-e-interpretaci%C3%B3n-del-resultado-4"><i class="fa fa-check"></i>6. Verificación e interpretación del resultado</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-05.html"><a href="problema-05.html#verificaci%C3%B3n-num%C3%A9rica"><i class="fa fa-check"></i>Verificación numérica</a></li>
+<li class="chapter" data-level="" data-path="problema-05.html"><a href="problema-05.html#verificaci%C3%B3n-dimensionall%C3%B3gica"><i class="fa fa-check"></i>Verificación dimensional/lógica</a></li>
+<li class="chapter" data-level="" data-path="problema-05.html"><a href="problema-05.html#comparaci%C3%B3n-con-opciones"><i class="fa fa-check"></i>Comparación con opciones</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-05.html"><a href="problema-05.html#conexi%C3%B3n-conceptual-4"><i class="fa fa-check"></i>7. Conexión conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-05.html"><a href="problema-05.html#errores-comunes-con-explicaci%C3%B3n-del-porqu%C3%A9-4"><i class="fa fa-check"></i>8. Errores comunes (con explicación del porqué)</a></li>
+<li class="chapter" data-level="" data-path="problema-05.html"><a href="problema-05.html#respuesta-final-4"><i class="fa fa-check"></i>9. Respuesta final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-06.html"><a href="problema-06.html"><i class="fa fa-check"></i>Problema 06</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-06.html"><a href="problema-06.html#enunciado-5"><i class="fa fa-check"></i>0. Enunciado</a></li>
+<li class="chapter" data-level="" data-path="problema-06.html"><a href="problema-06.html#qu%C3%A9-se-est%C3%A1-evaluando-alineaci%C3%B3n-soa-5"><i class="fa fa-check"></i>1. Qué se está evaluando (alineación SOA)</a></li>
+<li class="chapter" data-level="" data-path="problema-06.html"><a href="problema-06.html#marco-conceptual-5"><i class="fa fa-check"></i>2. Marco conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-06.html"><a href="problema-06.html#datos-y-supuestos-5"><i class="fa fa-check"></i>3. Datos y supuestos</a></li>
+<li class="chapter" data-level="" data-path="problema-06.html"><a href="problema-06.html#estrategia-de-soluci%C3%B3n-5"><i class="fa fa-check"></i>4. Estrategia de solución</a></li>
+<li class="chapter" data-level="" data-path="problema-06.html"><a href="problema-06.html#soluci%C3%B3n-paso-a-paso-detallada-5"><i class="fa fa-check"></i>5. Solución paso a paso (detallada)</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-06.html"><a href="problema-06.html#paso-1.-calcular-la-probabilidad-de-que-haya-pago"><i class="fa fa-check"></i>Paso 1. Calcular la probabilidad de que haya pago</a></li>
+<li class="chapter" data-level="" data-path="problema-06.html"><a href="problema-06.html#paso-2.-actualizar-las-probabilidades-de-mezcla-dado-que-hay-pago"><i class="fa fa-check"></i>Paso 2. Actualizar las probabilidades de mezcla dado que hay pago</a></li>
+<li class="chapter" data-level="" data-path="problema-06.html"><a href="problema-06.html#paso-3.-identificar-la-distribuci%C3%B3n-de-yp-dentro-de-cada-componente"><i class="fa fa-check"></i>Paso 3. Identificar la distribución de <span class="math inline">\(Y^P\)</span> dentro de cada componente</a></li>
+<li class="chapter" data-level="" data-path="problema-06.html"><a href="problema-06.html#paso-4.-aplicar-la-ley-de-varianza-total"><i class="fa fa-check"></i>Paso 4. Aplicar la ley de varianza total</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-06.html"><a href="problema-06.html#verificaci%C3%B3n-e-interpretaci%C3%B3n-del-resultado-5"><i class="fa fa-check"></i>6. Verificación e interpretación del resultado</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-06.html"><a href="problema-06.html#verificaci%C3%B3n-num%C3%A9rica-1"><i class="fa fa-check"></i>Verificación numérica</a></li>
+<li class="chapter" data-level="" data-path="problema-06.html"><a href="problema-06.html#verificaci%C3%B3n-l%C3%B3gica-y-dimensional"><i class="fa fa-check"></i>Verificación lógica y dimensional</a></li>
+<li class="chapter" data-level="" data-path="problema-06.html"><a href="problema-06.html#comparaci%C3%B3n-con-opciones-1"><i class="fa fa-check"></i>Comparación con opciones</a></li>
+<li class="chapter" data-level="" data-path="problema-06.html"><a href="problema-06.html#interpretaci%C3%B3n-final"><i class="fa fa-check"></i>Interpretación final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-06.html"><a href="problema-06.html#conexi%C3%B3n-conceptual-5"><i class="fa fa-check"></i>7. Conexión conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-06.html"><a href="problema-06.html#errores-comunes-con-explicaci%C3%B3n-del-porqu%C3%A9-5"><i class="fa fa-check"></i>8. Errores comunes (con explicación del porqué)</a></li>
+<li class="chapter" data-level="" data-path="problema-06.html"><a href="problema-06.html#respuesta-final-5"><i class="fa fa-check"></i>9. Respuesta final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-07.html"><a href="problema-07.html"><i class="fa fa-check"></i>Problema 07</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-07.html"><a href="problema-07.html#enunciado-6"><i class="fa fa-check"></i>0. Enunciado</a></li>
+<li class="chapter" data-level="" data-path="problema-07.html"><a href="problema-07.html#qu%C3%A9-se-est%C3%A1-evaluando-alineaci%C3%B3n-soa-6"><i class="fa fa-check"></i>1. Qué se está evaluando (alineación SOA)</a></li>
+<li class="chapter" data-level="" data-path="problema-07.html"><a href="problema-07.html#marco-conceptual-6"><i class="fa fa-check"></i>2. Marco conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-07.html"><a href="problema-07.html#datos-y-supuestos-6"><i class="fa fa-check"></i>3. Datos y supuestos</a></li>
+<li class="chapter" data-level="" data-path="problema-07.html"><a href="problema-07.html#estrategia-de-soluci%C3%B3n-6"><i class="fa fa-check"></i>4. Estrategia de solución</a></li>
+<li class="chapter" data-level="" data-path="problema-07.html"><a href="problema-07.html#soluci%C3%B3n-paso-a-paso-detallada-6"><i class="fa fa-check"></i>5. Solución paso a paso (detallada)</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-07.html"><a href="problema-07.html#paso-1.-normalizar-el-valor-de-la-anualidad"><i class="fa fa-check"></i>Paso 1. Normalizar el valor de la anualidad</a></li>
+<li class="chapter" data-level="" data-path="problema-07.html"><a href="problema-07.html#paso-2.-calcular-las-probabilidades-de-supervivencia-necesarias"><i class="fa fa-check"></i>Paso 2. Calcular las probabilidades de supervivencia necesarias</a></li>
+<li class="chapter" data-level="" data-path="problema-07.html"><a href="problema-07.html#paso-3.-construir-el-epv-de-la-anualidad-semestral-inmediata"><i class="fa fa-check"></i>Paso 3. Construir el EPV de la anualidad semestral inmediata</a></li>
+<li class="chapter" data-level="" data-path="problema-07.html"><a href="problema-07.html#paso-4.-resolver-la-ecuaci%C3%B3n-en-t%C3%A9rminos-de-v"><i class="fa fa-check"></i>Paso 4. Resolver la ecuación en términos de <span class="math inline">\(v\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-07.html"><a href="problema-07.html#paso-5.-obtener-v-y-luego-i"><i class="fa fa-check"></i>Paso 5. Obtener <span class="math inline">\(v\)</span> y luego <span class="math inline">\(i\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-07.html"><a href="problema-07.html#verificaci%C3%B3n-e-interpretaci%C3%B3n-del-resultado-6"><i class="fa fa-check"></i>6. Verificación e interpretación del resultado</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-07.html"><a href="problema-07.html#verificaci%C3%B3n-num%C3%A9rica-2"><i class="fa fa-check"></i>Verificación numérica</a></li>
+<li class="chapter" data-level="" data-path="problema-07.html"><a href="problema-07.html#verificaci%C3%B3n-dimensionall%C3%B3gica-1"><i class="fa fa-check"></i>Verificación dimensional/lógica</a></li>
+<li class="chapter" data-level="" data-path="problema-07.html"><a href="problema-07.html#comparaci%C3%B3n-con-opciones-2"><i class="fa fa-check"></i>Comparación con opciones</a></li>
+<li class="chapter" data-level="" data-path="problema-07.html"><a href="problema-07.html#interpretaci%C3%B3n-final-1"><i class="fa fa-check"></i>Interpretación final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-07.html"><a href="problema-07.html#conexi%C3%B3n-conceptual-6"><i class="fa fa-check"></i>7. Conexión conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-07.html"><a href="problema-07.html#errores-comunes-con-explicaci%C3%B3n-del-porqu%C3%A9-6"><i class="fa fa-check"></i>8. Errores comunes (con explicación del porqué)</a></li>
+<li class="chapter" data-level="" data-path="problema-07.html"><a href="problema-07.html#respuesta-final-6"><i class="fa fa-check"></i>9. Respuesta final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-08.html"><a href="problema-08.html"><i class="fa fa-check"></i>Problema 08</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-08.html"><a href="problema-08.html#enunciado-7"><i class="fa fa-check"></i>0. Enunciado</a></li>
+<li class="chapter" data-level="" data-path="problema-08.html"><a href="problema-08.html#qu%C3%A9-se-est%C3%A1-evaluando-alineaci%C3%B3n-soa-7"><i class="fa fa-check"></i>1. Qué se está evaluando (alineación SOA)</a></li>
+<li class="chapter" data-level="" data-path="problema-08.html"><a href="problema-08.html#marco-conceptual-7"><i class="fa fa-check"></i>2. Marco conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-08.html"><a href="problema-08.html#datos-y-supuestos-7"><i class="fa fa-check"></i>3. Datos y supuestos</a></li>
+<li class="chapter" data-level="" data-path="problema-08.html"><a href="problema-08.html#estrategia-de-soluci%C3%B3n-7"><i class="fa fa-check"></i>4. Estrategia de solución</a></li>
+<li class="chapter" data-level="" data-path="problema-08.html"><a href="problema-08.html#soluci%C3%B3n-paso-a-paso-detallada-7"><i class="fa fa-check"></i>5. Solución paso a paso (detallada)</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-08.html"><a href="problema-08.html#paso-1.-escribir-la-densidad-conjunta"><i class="fa fa-check"></i>Paso 1. Escribir la densidad conjunta</a></li>
+<li class="chapter" data-level="" data-path="problema-08.html"><a href="problema-08.html#paso-2.-tomar-log-verosimilitud"><i class="fa fa-check"></i>Paso 2. Tomar log-verosimilitud</a></li>
+<li class="chapter" data-level="" data-path="problema-08.html"><a href="problema-08.html#paso-3.-maximizar-respecto-a-delta"><i class="fa fa-check"></i>Paso 3. Maximizar respecto a <span class="math inline">\(\delta\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-08.html"><a href="problema-08.html#paso-4.-maximizar-respecto-a-theta"><i class="fa fa-check"></i>Paso 4. Maximizar respecto a <span class="math inline">\(\theta\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-08.html"><a href="problema-08.html#paso-5.-confirmar-usando-la-forma-de-promedio-de-excesos"><i class="fa fa-check"></i>Paso 5. Confirmar usando la forma de promedio de excesos</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-08.html"><a href="problema-08.html#verificaci%C3%B3n-e-interpretaci%C3%B3n-del-resultado-7"><i class="fa fa-check"></i>6. Verificación e interpretación del resultado</a></li>
+<li class="chapter" data-level="" data-path="problema-08.html"><a href="problema-08.html#conexi%C3%B3n-conceptual-7"><i class="fa fa-check"></i>7. Conexión conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-08.html"><a href="problema-08.html#errores-comunes-con-explicaci%C3%B3n-del-porqu%C3%A9-7"><i class="fa fa-check"></i>8. Errores comunes (con explicación del porqué)</a></li>
+<li class="chapter" data-level="" data-path="problema-08.html"><a href="problema-08.html#respuesta-final-7"><i class="fa fa-check"></i>9. Respuesta final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-09.html"><a href="problema-09.html"><i class="fa fa-check"></i>Problema 09</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-09.html"><a href="problema-09.html#enunciado-8"><i class="fa fa-check"></i>0. Enunciado</a></li>
+<li class="chapter" data-level="" data-path="problema-09.html"><a href="problema-09.html#qu%C3%A9-se-est%C3%A1-evaluando-alineaci%C3%B3n-soa-8"><i class="fa fa-check"></i>1. Qué se está evaluando (alineación SOA)</a></li>
+<li class="chapter" data-level="" data-path="problema-09.html"><a href="problema-09.html#marco-conceptual-8"><i class="fa fa-check"></i>2. Marco conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-09.html"><a href="problema-09.html#datos-y-supuestos-8"><i class="fa fa-check"></i>3. Datos y supuestos</a></li>
+<li class="chapter" data-level="" data-path="problema-09.html"><a href="problema-09.html#estrategia-de-soluci%C3%B3n-8"><i class="fa fa-check"></i>4. Estrategia de solución</a></li>
+<li class="chapter" data-level="" data-path="problema-09.html"><a href="problema-09.html#soluci%C3%B3n-paso-a-paso-detallada-8"><i class="fa fa-check"></i>5. Solución paso a paso (detallada)</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-09.html"><a href="problema-09.html#paso-1.-obtener-la-funci%C3%B3n-de-supervivencia"><i class="fa fa-check"></i>Paso 1. Obtener la función de supervivencia</a></li>
+<li class="chapter" data-level="" data-path="problema-09.html"><a href="problema-09.html#paso-2.-incorporar-inflaci%C3%B3n-y-l%C3%ADmite-de-p%C3%B3liza"><i class="fa fa-check"></i>Paso 2. Incorporar inflación y límite de póliza</a></li>
+<li class="chapter" data-level="" data-path="problema-09.html"><a href="problema-09.html#paso-3.-calcular-el-valor-esperado-limitado-exwedge-300"><i class="fa fa-check"></i>Paso 3. Calcular el valor esperado limitado <span class="math inline">\(E[X\wedge 300]\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-09.html"><a href="problema-09.html#paso-4.-aplicar-el-factor-de-inflaci%C3%B3n"><i class="fa fa-check"></i>Paso 4. Aplicar el factor de inflación</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-09.html"><a href="problema-09.html#verificaci%C3%B3n-e-interpretaci%C3%B3n-del-resultado-8"><i class="fa fa-check"></i>6. Verificación e interpretación del resultado</a></li>
+<li class="chapter" data-level="" data-path="problema-09.html"><a href="problema-09.html#conexi%C3%B3n-conceptual-8"><i class="fa fa-check"></i>7. Conexión conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-09.html"><a href="problema-09.html#errores-comunes-con-explicaci%C3%B3n-del-porqu%C3%A9-8"><i class="fa fa-check"></i>8. Errores comunes (con explicación del porqué)</a></li>
+<li class="chapter" data-level="" data-path="problema-09.html"><a href="problema-09.html#respuesta-final-8"><i class="fa fa-check"></i>9. Respuesta final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-10.html"><a href="problema-10.html"><i class="fa fa-check"></i>Problema 10</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-10.html"><a href="problema-10.html#enunciado-9"><i class="fa fa-check"></i>0. Enunciado</a></li>
+<li class="chapter" data-level="" data-path="problema-10.html"><a href="problema-10.html#qu%C3%A9-se-est%C3%A1-evaluando-alineaci%C3%B3n-soa-9"><i class="fa fa-check"></i>1. Qué se está evaluando (alineación SOA)</a></li>
+<li class="chapter" data-level="" data-path="problema-10.html"><a href="problema-10.html#marco-conceptual-9"><i class="fa fa-check"></i>2. Marco conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-10.html"><a href="problema-10.html#datos-y-supuestos-9"><i class="fa fa-check"></i>3. Datos y supuestos</a></li>
+<li class="chapter" data-level="" data-path="problema-10.html"><a href="problema-10.html#estrategia-de-soluci%C3%B3n-9"><i class="fa fa-check"></i>4. Estrategia de solución</a></li>
+<li class="chapter" data-level="" data-path="problema-10.html"><a href="problema-10.html#soluci%C3%B3n-paso-a-paso-detallada-9"><i class="fa fa-check"></i>5. Solución paso a paso (detallada)</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-10.html"><a href="problema-10.html#paso-1.-identificar-los-flujos-de-los-dos-primeros-a%C3%B1os"><i class="fa fa-check"></i>Paso 1. Identificar los flujos de los dos primeros años</a></li>
+<li class="chapter" data-level="" data-path="problema-10.html"><a href="problema-10.html#paso-2.-plantear-la-recursi%C3%B3n-bruta"><i class="fa fa-check"></i>Paso 2. Plantear la recursión bruta</a></li>
+<li class="chapter" data-level="" data-path="problema-10.html"><a href="problema-10.html#paso-3.-calcular-la-reserva-bruta-al-final-del-primer-a%C3%B1o-_1vg"><i class="fa fa-check"></i>Paso 3. Calcular la reserva bruta al final del primer año, <span class="math inline">\({}_1V^G\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-10.html"><a href="problema-10.html#paso-4.-calcular-la-reserva-bruta-al-final-del-segundo-a%C3%B1o-_2vg"><i class="fa fa-check"></i>Paso 4. Calcular la reserva bruta al final del segundo año, <span class="math inline">\({}_2V^G\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-10.html"><a href="problema-10.html#paso-5.-redondear-y-comparar-con-opciones"><i class="fa fa-check"></i>Paso 5. Redondear y comparar con opciones</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-10.html"><a href="problema-10.html#verificaci%C3%B3n-e-interpretaci%C3%B3n-del-resultado-9"><i class="fa fa-check"></i>6. Verificación e interpretación del resultado</a></li>
+<li class="chapter" data-level="" data-path="problema-10.html"><a href="problema-10.html#conexi%C3%B3n-conceptual-9"><i class="fa fa-check"></i>7. Conexión conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-10.html"><a href="problema-10.html#errores-comunes-con-explicaci%C3%B3n-del-porqu%C3%A9-9"><i class="fa fa-check"></i>8. Errores comunes (con explicación del porqué)</a></li>
+<li class="chapter" data-level="" data-path="problema-10.html"><a href="problema-10.html#respuesta-final-9"><i class="fa fa-check"></i>9. Respuesta final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-11.html"><a href="problema-11.html"><i class="fa fa-check"></i>Problema 11</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-11.html"><a href="problema-11.html#enunciado-10"><i class="fa fa-check"></i>0. Enunciado</a></li>
+<li class="chapter" data-level="" data-path="problema-11.html"><a href="problema-11.html#qu%C3%A9-se-est%C3%A1-evaluando-alineaci%C3%B3n-soa-10"><i class="fa fa-check"></i>1. Qué se está evaluando (alineación SOA)</a></li>
+<li class="chapter" data-level="" data-path="problema-11.html"><a href="problema-11.html#marco-conceptual-10"><i class="fa fa-check"></i>2. Marco conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-11.html"><a href="problema-11.html#datos-y-supuestos-10"><i class="fa fa-check"></i>3. Datos y supuestos</a></li>
+<li class="chapter" data-level="" data-path="problema-11.html"><a href="problema-11.html#estrategia-de-soluci%C3%B3n-10"><i class="fa fa-check"></i>4. Estrategia de solución</a></li>
+<li class="chapter" data-level="" data-path="problema-11.html"><a href="problema-11.html#soluci%C3%B3n-paso-a-paso-detallada-10"><i class="fa fa-check"></i>5. Solución paso a paso (detallada)</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-11.html"><a href="problema-11.html#paso-1.-calcular-el-factor-on-level-observado"><i class="fa fa-check"></i>Paso 1. Calcular el factor on-level observado</a></li>
+<li class="chapter" data-level="" data-path="problema-11.html"><a href="problema-11.html#paso-2.-calcular-el-nivel-tarifario-actual-relativo-al-nivel-original"><i class="fa fa-check"></i>Paso 2. Calcular el nivel tarifario actual relativo al nivel original</a></li>
+<li class="chapter" data-level="" data-path="problema-11.html"><a href="problema-11.html#paso-3.-inferir-el-nivel-tarifario-promedio-hist%C3%B3rico-de-la-prima-devengada-de-cy6"><i class="fa fa-check"></i>Paso 3. Inferir el nivel tarifario promedio histórico de la prima devengada de CY6</a></li>
+<li class="chapter" data-level="" data-path="problema-11.html"><a href="problema-11.html#paso-4.-construir-los-pesos-del-paralelogramo-para-cy6"><i class="fa fa-check"></i>Paso 4. Construir los pesos del paralelogramo para CY6</a></li>
+<li class="chapter" data-level="" data-path="problema-11.html"><a href="problema-11.html#paso-5.-calcular-el-peso-de-prima-al-nivel-actual-despu%C3%A9s-de-october-1-cy6"><i class="fa fa-check"></i>Paso 5. Calcular el peso de prima al nivel actual después de October 1, CY6</a></li>
+<li class="chapter" data-level="" data-path="problema-11.html"><a href="problema-11.html#paso-6.-expresar-el-peso-de-prima-al-nivel-anterior-al-cambio-de-cy5"><i class="fa fa-check"></i>Paso 6. Expresar el peso de prima al nivel anterior al cambio de CY5</a></li>
+<li class="chapter" data-level="" data-path="problema-11.html"><a href="problema-11.html#paso-7.-construir-el-nivel-tarifario-promedio-hist%C3%B3rico-bar-r"><i class="fa fa-check"></i>Paso 7. Construir el nivel tarifario promedio histórico <span class="math inline">\(\bar r\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-11.html"><a href="problema-11.html#paso-8.-igualar-el-promedio-del-paralelogramo-al-promedio-impl%C3%ADcito-observado"><i class="fa fa-check"></i>Paso 8. Igualar el promedio del paralelogramo al promedio implícito observado</a></li>
+<li class="chapter" data-level="" data-path="problema-11.html"><a href="problema-11.html#paso-9.-convertir-t-a-fecha-calendario"><i class="fa fa-check"></i>Paso 9. Convertir <span class="math inline">\(t\)</span> a fecha calendario</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-11.html"><a href="problema-11.html#verificaci%C3%B3n-e-interpretaci%C3%B3n-del-resultado-10"><i class="fa fa-check"></i>6. Verificación e interpretación del resultado</a></li>
+<li class="chapter" data-level="" data-path="problema-11.html"><a href="problema-11.html#conexi%C3%B3n-conceptual-10"><i class="fa fa-check"></i>7. Conexión conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-11.html"><a href="problema-11.html#errores-comunes-con-explicaci%C3%B3n-del-porqu%C3%A9-10"><i class="fa fa-check"></i>8. Errores comunes (con explicación del porqué)</a></li>
+<li class="chapter" data-level="" data-path="problema-11.html"><a href="problema-11.html#respuesta-final-10"><i class="fa fa-check"></i>9. Respuesta final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-12.html"><a href="problema-12.html"><i class="fa fa-check"></i>Problema 12</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-12.html"><a href="problema-12.html#enunciado-11"><i class="fa fa-check"></i>0. Enunciado</a></li>
+<li class="chapter" data-level="" data-path="problema-12.html"><a href="problema-12.html#qu%C3%A9-se-est%C3%A1-evaluando-alineaci%C3%B3n-soa-11"><i class="fa fa-check"></i>1. Qué se está evaluando (alineación SOA)</a></li>
+<li class="chapter" data-level="" data-path="problema-12.html"><a href="problema-12.html#marco-conceptual-11"><i class="fa fa-check"></i>2. Marco conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-12.html"><a href="problema-12.html#datos-y-supuestos-11"><i class="fa fa-check"></i>3. Datos y supuestos</a></li>
+<li class="chapter" data-level="" data-path="problema-12.html"><a href="problema-12.html#estrategia-de-soluci%C3%B3n-11"><i class="fa fa-check"></i>4. Estrategia de solución</a></li>
+<li class="chapter" data-level="" data-path="problema-12.html"><a href="problema-12.html#soluci%C3%B3n-paso-a-paso-detallada-11"><i class="fa fa-check"></i>5. Solución paso a paso (detallada)</a></li>
+<li class="chapter" data-level="" data-path="problema-12.html"><a href="problema-12.html#verificaci%C3%B3n-e-interpretaci%C3%B3n-del-resultado-11"><i class="fa fa-check"></i>6. Verificación e interpretación del resultado</a></li>
+<li class="chapter" data-level="" data-path="problema-12.html"><a href="problema-12.html#conexi%C3%B3n-conceptual-11"><i class="fa fa-check"></i>7. Conexión conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-12.html"><a href="problema-12.html#errores-comunes-con-explicaci%C3%B3n-del-porqu%C3%A9-11"><i class="fa fa-check"></i>8. Errores comunes (con explicación del porqué)</a></li>
+<li class="chapter" data-level="" data-path="problema-12.html"><a href="problema-12.html#respuesta-final-11"><i class="fa fa-check"></i>9. Respuesta final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-13.html"><a href="problema-13.html"><i class="fa fa-check"></i>Problema 13</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-13.html"><a href="problema-13.html#enunciado-12"><i class="fa fa-check"></i>0. Enunciado</a></li>
+<li class="chapter" data-level="" data-path="problema-13.html"><a href="problema-13.html#qu%C3%A9-se-est%C3%A1-evaluando-alineaci%C3%B3n-soa-12"><i class="fa fa-check"></i>1. Qué se está evaluando (alineación SOA)</a></li>
+<li class="chapter" data-level="" data-path="problema-13.html"><a href="problema-13.html#marco-conceptual-12"><i class="fa fa-check"></i>2. Marco conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-13.html"><a href="problema-13.html#datos-y-supuestos-12"><i class="fa fa-check"></i>3. Datos y supuestos</a></li>
+<li class="chapter" data-level="" data-path="problema-13.html"><a href="problema-13.html#estrategia-de-soluci%C3%B3n-12"><i class="fa fa-check"></i>4. Estrategia de solución</a></li>
+<li class="chapter" data-level="" data-path="problema-13.html"><a href="problema-13.html#soluci%C3%B3n-paso-a-paso-detallada-12"><i class="fa fa-check"></i>5. Solución paso a paso (detallada)</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-13.html"><a href="problema-13.html#paso-1.-convertir-el-cociente-no-consecutivo-en-un-cociente-consecutivo"><i class="fa fa-check"></i>Paso 1. Convertir el cociente no consecutivo en un cociente consecutivo</a></li>
+<li class="chapter" data-level="" data-path="problema-13.html"><a href="problema-13.html#paso-2.-resolver-los-par%C3%A1metros-a-y-b"><i class="fa fa-check"></i>Paso 2. Resolver los parámetros <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-13.html"><a href="problema-13.html#paso-3.-identificar-la-distribuci%C3%B3n-original-n"><i class="fa fa-check"></i>Paso 3. Identificar la distribución original <span class="math inline">\(N\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-13.html"><a href="problema-13.html#paso-4.-construir-la-distribuci%C3%B3n-zero-truncated-positiva-nt"><i class="fa fa-check"></i>Paso 4. Construir la distribución zero-truncated positiva <span class="math inline">\(N^T\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-13.html"><a href="problema-13.html#paso-5.-aplicar-la-f%C3%B3rmula-de-varianza-zero-modified"><i class="fa fa-check"></i>Paso 5. Aplicar la fórmula de varianza zero-modified</a></li>
+<li class="chapter" data-level="" data-path="problema-13.html"><a href="problema-13.html#paso-6.-redondear-a-la-opci%C3%B3n-de-respuesta"><i class="fa fa-check"></i>Paso 6. Redondear a la opción de respuesta</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-13.html"><a href="problema-13.html#verificaci%C3%B3n-e-interpretaci%C3%B3n-del-resultado-12"><i class="fa fa-check"></i>6. Verificación e interpretación del resultado</a></li>
+<li class="chapter" data-level="" data-path="problema-13.html"><a href="problema-13.html#conexi%C3%B3n-conceptual-12"><i class="fa fa-check"></i>7. Conexión conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-13.html"><a href="problema-13.html#errores-comunes-con-explicaci%C3%B3n-del-porqu%C3%A9-12"><i class="fa fa-check"></i>8. Errores comunes (con explicación del porqué)</a></li>
+<li class="chapter" data-level="" data-path="problema-13.html"><a href="problema-13.html#respuesta-final-12"><i class="fa fa-check"></i>9. Respuesta final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-14.html"><a href="problema-14.html"><i class="fa fa-check"></i>Problema 14</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-14.html"><a href="problema-14.html#enunciado-13"><i class="fa fa-check"></i>0. Enunciado</a></li>
+<li class="chapter" data-level="" data-path="problema-14.html"><a href="problema-14.html#qu%C3%A9-se-est%C3%A1-evaluando-alineaci%C3%B3n-soa-13"><i class="fa fa-check"></i>1. Qué se está evaluando (alineación SOA)</a></li>
+<li class="chapter" data-level="" data-path="problema-14.html"><a href="problema-14.html#marco-conceptual-13"><i class="fa fa-check"></i>2. Marco conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-14.html"><a href="problema-14.html#datos-y-supuestos-13"><i class="fa fa-check"></i>3. Datos y supuestos</a></li>
+<li class="chapter" data-level="" data-path="problema-14.html"><a href="problema-14.html#estrategia-de-soluci%C3%B3n-13"><i class="fa fa-check"></i>4. Estrategia de solución</a></li>
+<li class="chapter" data-level="" data-path="problema-14.html"><a href="problema-14.html#soluci%C3%B3n-paso-a-paso-detallada-13"><i class="fa fa-check"></i>5. Solución paso a paso (detallada)</a></li>
+<li class="chapter" data-level="" data-path="problema-14.html"><a href="problema-14.html#verificaci%C3%B3n-e-interpretaci%C3%B3n-del-resultado-13"><i class="fa fa-check"></i>6. Verificación e interpretación del resultado</a></li>
+<li class="chapter" data-level="" data-path="problema-14.html"><a href="problema-14.html#conexi%C3%B3n-conceptual-13"><i class="fa fa-check"></i>7. Conexión conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-14.html"><a href="problema-14.html#errores-comunes-con-explicaci%C3%B3n-del-porqu%C3%A9-13"><i class="fa fa-check"></i>8. Errores comunes (con explicación del porqué)</a></li>
+<li class="chapter" data-level="" data-path="problema-14.html"><a href="problema-14.html#respuesta-final-13"><i class="fa fa-check"></i>9. Respuesta final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-15.html"><a href="problema-15.html"><i class="fa fa-check"></i>Problema 15</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-15.html"><a href="problema-15.html#enunciado-14"><i class="fa fa-check"></i>0. Enunciado</a></li>
+<li class="chapter" data-level="" data-path="problema-15.html"><a href="problema-15.html#qu%C3%A9-se-est%C3%A1-evaluando-alineaci%C3%B3n-soa-14"><i class="fa fa-check"></i>1. Qué se está evaluando (alineación SOA)</a></li>
+<li class="chapter" data-level="" data-path="problema-15.html"><a href="problema-15.html#marco-conceptual-14"><i class="fa fa-check"></i>2. Marco conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-15.html"><a href="problema-15.html#datos-y-supuestos-14"><i class="fa fa-check"></i>3. Datos y supuestos</a></li>
+<li class="chapter" data-level="" data-path="problema-15.html"><a href="problema-15.html#estrategia-de-soluci%C3%B3n-14"><i class="fa fa-check"></i>4. Estrategia de solución</a></li>
+<li class="chapter" data-level="" data-path="problema-15.html"><a href="problema-15.html#soluci%C3%B3n-paso-a-paso-detallada-14"><i class="fa fa-check"></i>5. Solución paso a paso (detallada)</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-15.html"><a href="problema-15.html#paso-1.-calcular-la-severidad-esperada-ex"><i class="fa fa-check"></i>Paso 1. Calcular la severidad esperada <span class="math inline">\(E[X]\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-15.html"><a href="problema-15.html#paso-2.-calcular-la-media-agregada-es"><i class="fa fa-check"></i>Paso 2. Calcular la media agregada <span class="math inline">\(E[S]\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-15.html"><a href="problema-15.html#paso-3.-calcular-eswedge-5"><i class="fa fa-check"></i>Paso 3. Calcular <span class="math inline">\(E[S\wedge 5]\)</span></a></li>
+<li class="chapter" data-level="" data-path="problema-15.html"><a href="problema-15.html#paso-4.-plantear-la-ecuaci%C3%B3n-del-stop-loss-esperado"><i class="fa fa-check"></i>Paso 4. Plantear la ecuación del stop-loss esperado</a></li>
+<li class="chapter" data-level="" data-path="problema-15.html"><a href="problema-15.html#paso-5.-resolver-para-k"><i class="fa fa-check"></i>Paso 5. Resolver para <span class="math inline">\(k\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-15.html"><a href="problema-15.html#verificaci%C3%B3n-e-interpretaci%C3%B3n-del-resultado-14"><i class="fa fa-check"></i>6. Verificación e interpretación del resultado</a></li>
+<li class="chapter" data-level="" data-path="problema-15.html"><a href="problema-15.html#conexi%C3%B3n-conceptual-14"><i class="fa fa-check"></i>7. Conexión conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-15.html"><a href="problema-15.html#errores-comunes-con-explicaci%C3%B3n-del-porqu%C3%A9-14"><i class="fa fa-check"></i>8. Errores comunes (con explicación del porqué)</a></li>
+<li class="chapter" data-level="" data-path="problema-15.html"><a href="problema-15.html#respuesta-final-14"><i class="fa fa-check"></i>9. Respuesta final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-16.html"><a href="problema-16.html"><i class="fa fa-check"></i>Problema 16</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-16.html"><a href="problema-16.html#enunciado-15"><i class="fa fa-check"></i>0. Enunciado</a></li>
+<li class="chapter" data-level="" data-path="problema-16.html"><a href="problema-16.html#qu%C3%A9-se-est%C3%A1-evaluando-alineaci%C3%B3n-soa-15"><i class="fa fa-check"></i>1. Qué se está evaluando (alineación SOA)</a></li>
+<li class="chapter" data-level="" data-path="problema-16.html"><a href="problema-16.html#marco-conceptual-15"><i class="fa fa-check"></i>2. Marco conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-16.html"><a href="problema-16.html#datos-y-supuestos-15"><i class="fa fa-check"></i>3. Datos y supuestos</a></li>
+<li class="chapter" data-level="" data-path="problema-16.html"><a href="problema-16.html#estrategia-de-soluci%C3%B3n-15"><i class="fa fa-check"></i>4. Estrategia de solución</a></li>
+<li class="chapter" data-level="" data-path="problema-16.html"><a href="problema-16.html#soluci%C3%B3n-paso-a-paso-detallada-15"><i class="fa fa-check"></i>5. Solución paso a paso (detallada)</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-16.html"><a href="problema-16.html#paso-1.-determinar-la-fecha-promedio-futura-de-p%C3%A9rdida"><i class="fa fa-check"></i>Paso 1. Determinar la fecha promedio futura de pérdida</a></li>
+<li class="chapter" data-level="" data-path="problema-16.html"><a href="problema-16.html#paso-2.-calcular-la-prima-ganada-a-nivel-actual-por-accident-year"><i class="fa fa-check"></i>Paso 2. Calcular la prima ganada a nivel actual por accident year</a></li>
+<li class="chapter" data-level="" data-path="problema-16.html"><a href="problema-16.html#paso-3.-agregar-las-p%C3%A9rdidas-desarrolladas-por-accident-year"><i class="fa fa-check"></i>Paso 3. Agregar las pérdidas desarrolladas por accident year</a></li>
+<li class="chapter" data-level="" data-path="problema-16.html"><a href="problema-16.html#paso-4.-aplicar-trend-a-las-p%C3%A9rdidas"><i class="fa fa-check"></i>Paso 4. Aplicar trend a las pérdidas</a></li>
+<li class="chapter" data-level="" data-path="problema-16.html"><a href="problema-16.html#paso-5.-calcular-los-loss-ratios-proyectados-por-year-y-combinarlos"><i class="fa fa-check"></i>Paso 5. Calcular los loss ratios proyectados por year y combinarlos</a></li>
+<li class="chapter" data-level="" data-path="problema-16.html"><a href="problema-16.html#paso-6.-calcular-el-permissible-loss-ratio"><i class="fa fa-check"></i>Paso 6. Calcular el permissible loss ratio</a></li>
+<li class="chapter" data-level="" data-path="problema-16.html"><a href="problema-16.html#paso-7.-aplicar-el-m%C3%A9todo-de-loss-ratio-para-obtener-el-rate-change"><i class="fa fa-check"></i>Paso 7. Aplicar el método de loss ratio para obtener el rate change</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-16.html"><a href="problema-16.html#verificaci%C3%B3n-e-interpretaci%C3%B3n-del-resultado-15"><i class="fa fa-check"></i>6. Verificación e interpretación del resultado</a></li>
+<li class="chapter" data-level="" data-path="problema-16.html"><a href="problema-16.html#conexi%C3%B3n-conceptual-15"><i class="fa fa-check"></i>7. Conexión conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-16.html"><a href="problema-16.html#errores-comunes-con-explicaci%C3%B3n-del-porqu%C3%A9-15"><i class="fa fa-check"></i>8. Errores comunes (con explicación del porqué)</a></li>
+<li class="chapter" data-level="" data-path="problema-16.html"><a href="problema-16.html#respuesta-final-15"><i class="fa fa-check"></i>9. Respuesta final</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-17.html"><a href="problema-17.html"><i class="fa fa-check"></i>Problema 17</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-17.html"><a href="problema-17.html#enunciado-16"><i class="fa fa-check"></i>0. Enunciado</a></li>
+<li class="chapter" data-level="" data-path="problema-17.html"><a href="problema-17.html#qu%C3%A9-se-est%C3%A1-evaluando-alineaci%C3%B3n-soa-16"><i class="fa fa-check"></i>1. Qué se está evaluando (alineación SOA)</a></li>
+<li class="chapter" data-level="" data-path="problema-17.html"><a href="problema-17.html#marco-conceptual-16"><i class="fa fa-check"></i>2. Marco conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-17.html"><a href="problema-17.html#datos-y-supuestos-16"><i class="fa fa-check"></i>3. Datos y supuestos</a></li>
+<li class="chapter" data-level="" data-path="problema-17.html"><a href="problema-17.html#estrategia-de-soluci%C3%B3n-16"><i class="fa fa-check"></i>4. Estrategia de solución</a></li>
+<li class="chapter" data-level="" data-path="problema-17.html"><a href="problema-17.html#soluci%C3%B3n-paso-a-paso-detallada-16"><i class="fa fa-check"></i>5. Solución paso a paso (detallada)</a>
+<ul>
+<li class="chapter" data-level="" data-path="problema-17.html"><a href="problema-17.html#paso-1.-determinar-la-fecha-promedio-de-p%C3%A9rdida-hist%C3%B3rica"><i class="fa fa-check"></i>Paso 1. Determinar la fecha promedio de pérdida histórica</a></li>
+<li class="chapter" data-level="" data-path="problema-17.html"><a href="problema-17.html#paso-2.-determinar-la-fecha-promedio-de-p%C3%A9rdida-futura"><i class="fa fa-check"></i>Paso 2. Determinar la fecha promedio de pérdida futura</a></li>
+<li class="chapter" data-level="" data-path="problema-17.html"><a href="problema-17.html#paso-3.-calcular-los-per%C3%ADodos-de-trend"><i class="fa fa-check"></i>Paso 3. Calcular los períodos de trend</a></li>
+<li class="chapter" data-level="" data-path="problema-17.html"><a href="problema-17.html#paso-4.-proyectar-cada-pure-premium-hist%C3%B3rica"><i class="fa fa-check"></i>Paso 4. Proyectar cada pure premium histórica</a></li>
+<li class="chapter" data-level="" data-path="problema-17.html"><a href="problema-17.html#paso-5.-calcular-el-promedio-ponderado-proyectado"><i class="fa fa-check"></i>Paso 5. Calcular el promedio ponderado proyectado</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problema-17.html"><a href="problema-17.html#verificaci%C3%B3n-e-interpretaci%C3%B3n-del-resultado-16"><i class="fa fa-check"></i>6. Verificación e interpretación del resultado</a></li>
+<li class="chapter" data-level="" data-path="problema-17.html"><a href="problema-17.html#conexi%C3%B3n-conceptual-16"><i class="fa fa-check"></i>7. Conexión conceptual</a></li>
+<li class="chapter" data-level="" data-path="problema-17.html"><a href="problema-17.html#errores-comunes-con-explicaci%C3%B3n-del-porqu%C3%A9-16"><i class="fa fa-check"></i>8. Errores comunes (con explicación del porqué)</a></li>
+<li class="chapter" data-level="" data-path="problema-17.html"><a href="problema-17.html#respuesta-final-16"><i class="fa fa-check"></i>9. Respuesta final</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Examen 02</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="problema-05" class="section level1 hasAnchor">
+<h1>Problema 05<a href="problema-05.html#problema-05" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<hr />
+
+<div id="enunciado-4" class="section level2 hasAnchor">
+<h2>0. Enunciado<a href="problema-05.html#enunciado-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For a fully discrete whole life insurance of 10,000 on (45), you are given:</p>
+<ol style="list-style-type: lower-roman">
+<li><p>Commissions are 80% of the first year premium and 10% of subsequent premiums. There are no other expenses.</p></li>
+<li><p>Mortality follows the Standard Ultimate Life Table.</p></li>
+<li><p><span class="math inline">\(i = 0.05\)</span></p></li>
+<li><p><span class="math inline">\({}_0L\)</span> denotes the loss at issue random variable.</p></li>
+<li><p>If <span class="math inline">\(T_{45}=10.5\)</span>, then <span class="math inline">\({}_0L=4,953\)</span>.</p></li>
+</ol>
+<p>Calculate <span class="math inline">\(E[{}_0L]\)</span>.</p>
+<p>A <span class="math inline">\(-580\)</span></p>
+<p>B <span class="math inline">\(-520\)</span></p>
+<p>C <span class="math inline">\(-460\)</span></p>
+<p>D <span class="math inline">\(-400\)</span></p>
+<p>E <span class="math inline">\(-340\)</span></p>
+</div>
+<div id="qué-se-está-evaluando-alineación-soa-4" class="section level2 hasAnchor">
+<h2>1. Qué se está evaluando (alineación SOA)<a href="problema-05.html#qu%C3%A9-se-est%C3%A1-evaluando-alineaci%C3%B3n-soa-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Este problema cae principalmente en:</p>
+<ul>
+<li><strong>LO 9(a), 9(e):</strong> identificar y aplicar variables aleatorias de valor presente para seguros de vida.<br />
+</li>
+<li><strong>LO 10(a), 10(b):</strong> identificar la variable de pérdida futura y calcular primas/pérdidas usando principios de valor presente.</li>
+</ul>
+<p>La señal clave es la frase <strong>fully discrete whole life insurance</strong> junto con <span class="math inline">\({}_0L\)</span>, comisiones y <span class="math inline">\(E[{}_0L]\)</span>. No solo necesitamos valorar el beneficio por muerte, sino también primas y gastos dependientes de la prima.</p>
+<p>Conceptos previos necesarios: seguro de vida entera discreto, vida futura completa <span class="math inline">\(T_x\)</span>, vida futura curtada <span class="math inline">\(K_x=\lfloor T_x\rfloor\)</span>, factor de descuento <span class="math inline">\(v\)</span>, tasa de descuento <span class="math inline">\(d\)</span>, <span class="math inline">\(A_x\)</span>, <span class="math inline">\(\ddot a_x\)</span>, y variable de pérdida bruta.</p>
+</div>
+<div id="marco-conceptual-4" class="section level2 hasAnchor">
+<h2>2. Marco conceptual<a href="problema-05.html#marco-conceptual-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Un seguro de vida entera <strong>fully discrete</strong> paga el beneficio al final del año de muerte y cobra primas al inicio de cada año mientras el asegurado está vivo. Si <span class="math inline">\(T_x\)</span> es la vida futura completa, entonces <span class="math inline">\(K_x=\lfloor T_x\rfloor\)</span> es el número de años completos vividos antes de morir. Por eso, si <span class="math inline">\(K_x=k\)</span>, el beneficio se paga en tiempo <span class="math inline">\(k+1\)</span>, con valor presente <span class="math inline">\(v^{k+1}\)</span>. Para un beneficio unitario, el valor esperado de ese pago es <span class="math inline">\(A_x=E[v^{K_x+1}]\)</span> [R1, Formula Sheet: whole life discrete <span class="math inline">\(Z=v^{K_x+1}\)</span>, <span class="math inline">\(A_x=\sum_{k=0}^{\infty}v^{k+1}{}_k|q_x\)</span>].</p>
+<p>La variable <span class="math inline">\({}_0L\)</span> representa la pérdida al emitir la póliza: valor presente de beneficios y gastos menos valor presente de primas. Aquí es una <strong>pérdida bruta</strong>, porque hay comisiones. Si la prima anual bruta es <span class="math inline">\(G\)</span>, la comisión inicial es <span class="math inline">\(0.8G\)</span> y la comisión de renovación es <span class="math inline">\(0.1G\)</span> en las primas posteriores.</p>
+<p>El dato especial <span class="math inline">\(T_{45}=10.5\Rightarrow {}_0L=4{,}953\)</span> no es para calcular una probabilidad; sirve para <strong>calibrar la prima bruta <span class="math inline">\(G\)</span></strong>. Como <span class="math inline">\(T_{45}=10.5\)</span>, entonces <span class="math inline">\(K_{45}=10\)</span>, así que el beneficio se paga en tiempo <span class="math inline">\(11\)</span>, y se pagan primas en tiempos <span class="math inline">\(0,1,\dots,10\)</span>.</p>
+<p>Hay dos enfoques válidos. Uno es escribir explícitamente todos los flujos de caja. El otro, más limpio, usa la fórmula compacta de pérdida bruta para un seguro de vida entera fully discrete. Usaremos la fórmula compacta y la interpretaremos, porque reduce errores de timing.</p>
+</div>
+<div id="datos-y-supuestos-4" class="section level2 hasAnchor">
+<h2>3. Datos y supuestos<a href="problema-05.html#datos-y-supuestos-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<colgroup>
+<col width="27%" />
+<col width="36%" />
+<col width="36%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concepto</th>
+<th align="right">Símbolo</th>
+<th align="right">Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Edad inicial</td>
+<td align="right"><span class="math inline">\(x\)</span></td>
+<td align="right"><span class="math inline">\(45\)</span></td>
+</tr>
+<tr class="even">
+<td>Beneficio por muerte</td>
+<td align="right"><span class="math inline">\(b\)</span></td>
+<td align="right"><span class="math inline">\(10{,}000\)</span></td>
+</tr>
+<tr class="odd">
+<td>Tasa efectiva anual</td>
+<td align="right"><span class="math inline">\(i\)</span></td>
+<td align="right"><span class="math inline">\(0.05\)</span></td>
+</tr>
+<tr class="even">
+<td>Factor de descuento</td>
+<td align="right"><span class="math inline">\(v=(1+i)^{-1}\)</span></td>
+<td align="right"><span class="math inline">\(0.952381\)</span></td>
+</tr>
+<tr class="odd">
+<td>Tasa de descuento</td>
+<td align="right"><span class="math inline">\(d=\frac{i}{1+i}\)</span></td>
+<td align="right"><span class="math inline">\(0.047619\)</span> [R5, Interest Functions at <span class="math inline">\(i=0.05\)</span>: <span class="math inline">\(d=0.04762\)</span>]</td>
+</tr>
+<tr class="even">
+<td>Comisión inicial</td>
+<td align="right"><span class="math inline">\(e_i\)</span></td>
+<td align="right"><span class="math inline">\(0.8G\)</span></td>
+</tr>
+<tr class="odd">
+<td>Comisión de renovación</td>
+<td align="right"><span class="math inline">\(e_r\)</span></td>
+<td align="right"><span class="math inline">\(0.1G\)</span></td>
+</tr>
+<tr class="even">
+<td>Gasto de liquidación</td>
+<td align="right"><span class="math inline">\(E\)</span></td>
+<td align="right"><span class="math inline">\(0\)</span></td>
+</tr>
+<tr class="odd">
+<td>APV seguro vida entera</td>
+<td align="right"><span class="math inline">\(A_{45}\)</span></td>
+<td align="right"><span class="math inline">\(0.15161\)</span> [R2, SULT: <span class="math inline">\(A_{45}=0.15161\)</span>]</td>
+</tr>
+<tr class="even">
+<td>Anualidad vitalicia anticipada</td>
+<td align="right"><span class="math inline">\(\ddot a_{45}\)</span></td>
+<td align="right"><span class="math inline">\(17.8162\)</span> [R2, SULT: <span class="math inline">\(\ddot a_{45}=17.8162\)</span>]</td>
+</tr>
+<tr class="odd">
+<td>Vida futura dada</td>
+<td align="right"><span class="math inline">\(T_{45}\)</span></td>
+<td align="right"><span class="math inline">\(10.5\)</span></td>
+</tr>
+<tr class="even">
+<td>Vida futura curtada</td>
+<td align="right"><span class="math inline">\(K_{45}=\lfloor 10.5\rfloor\)</span></td>
+<td align="right"><span class="math inline">\(10\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Supuesto estándar FAM: en una póliza <strong>fully discrete</strong>, las primas se pagan al inicio de cada año y el beneficio por muerte se paga al final del año de muerte [R1, Formula Sheet: fully discrete means premiums at beginning of year and death benefits at end of year]. Por eso, si <span class="math inline">\(T_{45}=10.5\)</span>, se paga prima en <span class="math inline">\(t=10\)</span>, pero el beneficio se paga en <span class="math inline">\(t=11\)</span>.</p>
+</div>
+<div id="estrategia-de-solución-4" class="section level2 hasAnchor">
+<h2>4. Estrategia de solución<a href="problema-05.html#estrategia-de-soluci%C3%B3n-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Primero usamos el dato realizado <span class="math inline">\({}_0L=4{,}953\)</span> cuando <span class="math inline">\(T_{45}=10.5\)</span> para despejar la prima bruta anual <span class="math inline">\(G\)</span>. Este paso es necesario porque la prima no se da explícitamente.</p>
+<p>Luego calculamos <span class="math inline">\(E[{}_0L]\)</span> reemplazando el valor aleatorio <span class="math inline">\(v^{K_{45}+1}\)</span> por su esperanza <span class="math inline">\(A_{45}\)</span>. La fórmula principal es la pérdida bruta fully discrete para vida entera:</p>
+<p><span class="math display">\[  
+{}_0L^g  
+=  
+\left(b+E+\frac{G-e_r}{d}\right)v^{K_x+1}  
+-  
+\frac{G-e_r}{d}  
++  
+(e_i-e_r)  
+\]</span></p>
+<p>[R1, Formula Sheet: gross future loss for fully discrete whole life].</p>
+<p>El enfoque alternativo sería sumar explícitamente primas, comisiones y beneficio en cada tiempo. Da el mismo resultado, pero la fórmula compacta es menos propensa a errores porque ya incorpora la identidad de anualidad anticipada.</p>
+</div>
+<div id="solución-paso-a-paso-detallada-4" class="section level2 hasAnchor">
+<h2>5. Solución paso a paso (detallada)<a href="problema-05.html#soluci%C3%B3n-paso-a-paso-detallada-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="paso-1.-determinar-el-año-de-pago-del-beneficio" class="section level3 hasAnchor">
+<h3>Paso 1. Determinar el año de pago del beneficio<a href="problema-05.html#paso-1.-determinar-el-a%C3%B1o-de-pago-del-beneficio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Qué hago.</strong> Convierto <span class="math inline">\(T_{45}=10.5\)</span> en <span class="math inline">\(K_{45}\)</span>.</p>
+<p><strong>Por qué.</strong> En seguros fully discrete, el beneficio se paga al final del año de muerte, es decir, en <span class="math inline">\(K_x+1\)</span>.</p>
+<p><strong>Fórmula.</strong></p>
+<p><span class="math display">\[  
+K_x=\lfloor T_x\rfloor  
+\]</span></p>
+<p>[R1, Formula Sheet: <span class="math inline">\(K_x\)</span> is the curtate future lifetime].</p>
+<p><strong>Sustitución.</strong></p>
+<p><span class="math display">\[  
+K_{45}=\lfloor 10.5\rfloor=10  
+\]</span></p>
+<p>Por tanto,</p>
+<p><span class="math display">\[  
+K_{45}+1=11  
+\]</span></p>
+<p><strong>Resultado intermedio.</strong> El beneficio de <span class="math inline">\(10{,}000\)</span> se paga en tiempo <span class="math inline">\(11\)</span>.</p>
+<p><strong>Interpretación.</strong> La muerte ocurre durante el año 11 de la póliza: después de pagar la prima al inicio del año 11, pero antes del final de ese año.</p>
+<hr />
+</div>
+<div id="paso-2.-plantear-la-pérdida-bruta-realizada" class="section level3 hasAnchor">
+<h3>Paso 2. Plantear la pérdida bruta realizada<a href="problema-05.html#paso-2.-plantear-la-p%C3%A9rdida-bruta-realizada" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Qué hago.</strong> Escribo <span class="math inline">\({}_0L\)</span> usando la fórmula de pérdida bruta fully discrete.</p>
+<p><strong>Por qué.</strong> La pérdida incluye beneficio, comisiones y primas. Como las comisiones son porcentajes de <span class="math inline">\(G\)</span>, primero debemos encontrar <span class="math inline">\(G\)</span>.</p>
+<p><strong>Fórmula.</strong></p>
+<p><span class="math display">\[  
+{}_0L^g  
+=  
+\left(b+E+\frac{G-e_r}{d}\right)v^{K_x+1}  
+-  
+\frac{G-e_r}{d}  
++  
+(e_i-e_r)  
+\]</span></p>
+<p>[R1, Formula Sheet: gross future loss for fully discrete whole life].</p>
+<p>Aquí:</p>
+<p><span class="math display">\[  
+e_i=0.8G,\qquad e_r=0.1G,\qquad E=0  
+\]</span></p>
+<p>Entonces:</p>
+<p><span class="math display">\[  
+G-e_r=G-0.1G=0.9G  
+\]</span></p>
+<p>y</p>
+<p><span class="math display">\[  
+e_i-e_r=0.8G-0.1G=0.7G  
+\]</span></p>
+<p>Por tanto,</p>
+<p><span class="math display">\[  
+{}_0L  
+=  
+\left(10{,}000+\frac{0.9G}{d}\right)v^{11}  
+-  
+\frac{0.9G}{d}  
++  
+0.7G  
+\]</span></p>
+<p><strong>Sustitución.</strong></p>
+<p>Con <span class="math inline">\(i=0.05\)</span>,</p>
+<p><span class="math display">\[  
+v=\frac{1}{1.05}=0.952381,\qquad d=\frac{0.05}{1.05}=0.047619  
+\]</span></p>
+<p>[R5, Interest Functions at <span class="math inline">\(i=0.05\)</span>: <span class="math inline">\(d=0.04762\)</span>].</p>
+<p>Además,</p>
+<p><span class="math display">\[  
+v^{11}=(1.05)^{-11}=0.584679  
+\]</span></p>
+<p>Sustituimos en el dato <span class="math inline">\({}_0L=4{,}953\)</span>:</p>
+<p><span class="math display">\[  
+4{,}953  
+=  
+\left(10{,}000+\frac{0.9G}{0.047619}\right)(0.584679)  
+-  
+\frac{0.9G}{0.047619}  
++  
+0.7G  
+\]</span></p>
+<p>Como</p>
+<p><span class="math display">\[  
+\frac{0.9}{0.047619}=18.9  
+\]</span></p>
+<p>tenemos:</p>
+<p><span class="math display">\[  
+4{,}953  
+=  
+(10{,}000+18.9G)(0.584679)-18.9G+0.7G  
+\]</span></p>
+<p>Distribuyendo:</p>
+<p><span class="math display">\[  
+4{,}953  
+=  
+5{,}846.79  
++  
+11.0504G  
+-  
+18.9G  
++  
+0.7G  
+\]</span></p>
+<p><span class="math display">\[  
+4{,}953  
+=  
+5{,}846.79  
+-  
+7.14956G  
+\]</span></p>
+<p>Despejando:</p>
+<p><span class="math display">\[  
+-893.793  
+=  
+-7.14956G  
+\]</span></p>
+<p><span class="math display">\[  
+G=\frac{893.793}{7.14956}=125.014  
+\]</span></p>
+<p><strong>Resultado intermedio.</strong></p>
+<p><span class="math display">\[  
+G\approx 125.014  
+\]</span></p>
+<p><strong>Interpretación.</strong> La prima anual bruta es aproximadamente <span class="math inline">\(125\)</span>. Es razonable: el beneficio es <span class="math inline">\(10{,}000\)</span>, pero la mortalidad a los 45 años es baja y las primas se pagan mientras el asegurado vive.</p>
+<hr />
+</div>
+<div id="paso-3.-calcular-la-esperanza-de-la-pérdida" class="section level3 hasAnchor">
+<h3>Paso 3. Calcular la esperanza de la pérdida<a href="problema-05.html#paso-3.-calcular-la-esperanza-de-la-p%C3%A9rdida" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Qué hago.</strong> Tomo esperanza de la fórmula de pérdida bruta.</p>
+<p><strong>Por qué.</strong> La única parte aleatoria en la fórmula compacta es <span class="math inline">\(v^{K_{45}+1}\)</span>. Su esperanza es <span class="math inline">\(A_{45}\)</span>.</p>
+<p><strong>Fórmula.</strong></p>
+<p><span class="math display">\[  
+E[v^{K_x+1}]=A_x  
+\]</span></p>
+<p>[R1, Formula Sheet: whole life discrete <span class="math inline">\(A_x=E[v^{K_x+1}]\)</span>].</p>
+<p>Por tanto,</p>
+<p><span class="math display">\[  
+E[{}_0L]  
+=  
+\left(b+E+\frac{G-e_r}{d}\right)A_x  
+-  
+\frac{G-e_r}{d}  
++  
+(e_i-e_r)  
+\]</span></p>
+<p>[R1, Formula Sheet: gross future loss for fully discrete whole life].</p>
+<p>Sustituyendo <span class="math inline">\(e_i=0.8G\)</span>, <span class="math inline">\(e_r=0.1G\)</span>, <span class="math inline">\(E=0\)</span>:</p>
+<p><span class="math display">\[  
+E[{}_0L]  
+=  
+\left(10{,}000+\frac{0.9G}{d}\right)A_{45}  
+-  
+\frac{0.9G}{d}  
++  
+0.7G  
+\]</span></p>
+<p><strong>Sustitución.</strong></p>
+<p>Usamos <span class="math inline">\(A_{45}=0.15161\)</span> [R2, SULT: <span class="math inline">\(A_{45}=0.15161\)</span>], <span class="math inline">\(G=125.014\)</span>, <span class="math inline">\(d=0.047619\)</span>:</p>
+<p><span class="math display">\[  
+E[{}_0L]  
+=  
+\left(10{,}000+\frac{0.9(125.014)}{0.047619}\right)(0.15161)  
+-  
+\frac{0.9(125.014)}{0.047619}  
++  
+0.7(125.014)  
+\]</span></p>
+<p>Primero:</p>
+<p><span class="math display">\[  
+\frac{0.9(125.014)}{0.047619}  
+=  
+2{,}362.76  
+\]</span></p>
+<p>Entonces:</p>
+<p><span class="math display">\[  
+E[{}_0L]  
+=  
+(10{,}000+2{,}362.76)(0.15161)  
+-  
+2{,}362.76  
++  
+87.5096  
+\]</span></p>
+<p><span class="math display">\[  
+E[{}_0L]  
+=  
+12{,}362.76(0.15161)  
+-  
+2{,}362.76  
++  
+87.5096  
+\]</span></p>
+<p><span class="math display">\[  
+E[{}_0L]  
+=  
+1{,}874.29  
+-  
+2{,}362.76  
++  
+87.5096  
+\]</span></p>
+<p><span class="math display">\[  
+E[{}_0L]  
+=  
+-400.93  
+\]</span></p>
+<p><strong>Resultado intermedio.</strong></p>
+<p><span class="math display">\[  
+E[{}_0L]\approx -400.93  
+\]</span></p>
+<p><strong>Interpretación.</strong> En promedio, bajo esta prima bruta y estas comisiones, la aseguradora tiene una ganancia esperada de aproximadamente <span class="math inline">\(401\)</span>, porque la pérdida esperada es negativa.</p>
+<hr />
+</div>
+<div id="paso-4.-confirmación-con-la-forma-de-anualidad" class="section level3 hasAnchor">
+<h3>Paso 4. Confirmación con la forma de anualidad<a href="problema-05.html#paso-4.-confirmaci%C3%B3n-con-la-forma-de-anualidad" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Qué hago.</strong> Reexpreso la esperanza usando <span class="math inline">\(\ddot a_{45}\)</span>.</p>
+<p><strong>Por qué.</strong> Esto verifica que la fórmula compacta coincide con la intuición de “beneficios + gastos − primas”.</p>
+<p>La relación clave es:</p>
+<p><span class="math display">\[  
+A_x=1-d\ddot a_x  
+\]</span></p>
+<p>equivalentemente,</p>
+<p><span class="math display">\[  
+\ddot a_x=\frac{1-A_x}{d}  
+\]</span></p>
+<p>[R1, Formula Sheet: relationship between whole life insurance and annuities <span class="math inline">\(A_x=1-d\ddot a_x\)</span>].</p>
+<p>De la SULT:</p>
+<p><span class="math display">\[  
+\ddot a_{45}=17.8162  
+\]</span></p>
+<p>[R2, SULT: <span class="math inline">\(\ddot a_{45}=17.8162\)</span>].</p>
+<p>Entonces:</p>
+<p><span class="math display">\[  
+E[{}_0L]  
+=  
+10{,}000A_{45}  
++  
+0.8G  
++  
+0.1G(\ddot a_{45}-1)  
+-  
+G\ddot a_{45}  
+\]</span></p>
+<p>La parte <span class="math inline">\(0.1G(\ddot a_{45}-1)\)</span> aparece porque la comisión de 10% aplica solo a primas posteriores a la primera.</p>
+<p>Sustituyendo:</p>
+<p><span class="math display">\[  
+E[{}_0L]  
+=  
+10{,}000(0.15161)  
++  
+0.8(125.014)  
++  
+0.1(125.014)(17.8162-1)  
+-  
+125.014(17.8162)  
+\]</span></p>
+<p><span class="math display">\[  
+E[{}_0L]  
+=  
+1{,}516.10  
++  
+100.011  
++  
+210.229  
+-  
+2{,}227.27  
+\]</span></p>
+<p><span class="math display">\[  
+E[{}_0L]  
+=  
+-400.93  
+\]</span></p>
+<p><strong>Resultado intermedio.</strong> La misma esperanza se obtiene por suma directa de flujos.</p>
+<p><strong>Interpretación.</strong> Esta verificación muestra que no estamos “perdiendo” ninguna comisión: la primera comisión se separa de las renovaciones correctamente.</p>
+</div>
+</div>
+<div id="verificación-e-interpretación-del-resultado-4" class="section level2 hasAnchor">
+<h2>6. Verificación e interpretación del resultado<a href="problema-05.html#verificaci%C3%B3n-e-interpretaci%C3%B3n-del-resultado-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="verificación-numérica" class="section level3 hasAnchor">
+<h3>Verificación numérica<a href="problema-05.html#verificaci%C3%B3n-num%C3%A9rica" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El resultado es negativo:</p>
+<p><span class="math display">\[  
+E[{}_0L]\approx -400.93  
+\]</span></p>
+<p>Esto tiene sentido porque la prima <span class="math inline">\(G\)</span> fue calibrada a partir de una muerte relativamente temprana, <span class="math inline">\(T_{45}=10.5\)</span>, que produce una pérdida positiva de <span class="math inline">\(4{,}953\)</span>. En promedio, una vida de 45 años puede vivir mucho más tiempo, generando más primas; por eso la pérdida esperada puede ser negativa.</p>
+</div>
+<div id="verificación-dimensionallógica" class="section level3 hasAnchor">
+<h3>Verificación dimensional/lógica<a href="problema-05.html#verificaci%C3%B3n-dimensionall%C3%B3gica" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Todos los términos están en unidades monetarias de valor presente al tiempo 0. El beneficio esperado <span class="math inline">\(10{,}000A_{45}=1{,}516.10\)</span> es positivo. Las primas esperadas <span class="math inline">\(G\ddot a_{45}\approx 2{,}227.27\)</span> superan al beneficio esperado, pero las comisiones agregan gastos esperados de aproximadamente <span class="math inline">\(310.24\)</span>. La combinación produce una pérdida esperada cercana a <span class="math inline">\(-401\)</span>.</p>
+</div>
+<div id="comparación-con-opciones" class="section level3 hasAnchor">
+<h3>Comparación con opciones<a href="problema-05.html#comparaci%C3%B3n-con-opciones" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[  
+E[{}_0L]\approx -400.93  
+\]</span></p>
+<p>La opción más cercana es:</p>
+<p><span class="math display">\[  
+\boxed{\text{D } -400}  
+\]</span></p>
+<p>Las distractoras cercanas suelen venir de errores de timing:</p>
+<ul>
+<li><span class="math inline">\(-340\)</span>: puede resultar de tratar incorrectamente las comisiones de renovación, por ejemplo aplicando <span class="math inline">\(10\%\)</span> a todas las primas sin ajustar la comisión inicial.<br />
+</li>
+<li><span class="math inline">\(-460\)</span>: puede surgir de usar <span class="math inline">\(T=10.5\)</span> como si el beneficio se pagara en <span class="math inline">\(10.5\)</span>, lo cual sería semi-continuo, no fully discrete.<br />
+</li>
+<li><span class="math inline">\(-520\)</span> o <span class="math inline">\(-580\)</span>: pueden surgir de omitir parte de las comisiones o de usar una anualidad inmediata en vez de una anualidad anticipada.</li>
+</ul>
+<p>Interpretación final: bajo la prima implícita en el dato de pérdida realizada, la aseguradora espera ganar aproximadamente <span class="math inline">\(401\)</span> en valor presente por póliza.</p>
+</div>
+</div>
+<div id="conexión-conceptual-4" class="section level2 hasAnchor">
+<h2>7. Conexión conceptual<a href="problema-05.html#conexi%C3%B3n-conceptual-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Este es un patrón recurrente en FAM: primero se usa una realización de la pérdida para despejar una prima desconocida, y luego se calcula la esperanza usando valores actuariales tabulados. La clave es reconocer qué parte es aleatoria: aquí <span class="math inline">\(v^{K_x+1}\)</span> y la cantidad de primas pagadas.</p>
+<p>Si el seguro fuera <strong>fully continuous</strong>, el beneficio se pagaría en <span class="math inline">\(T_x\)</span> y usaríamos <span class="math inline">\(\bar A_x=E[v^{T_x}]\)</span> y <span class="math inline">\(\bar a_x\)</span>, no <span class="math inline">\(A_x\)</span> ni <span class="math inline">\(\ddot a_x\)</span>. Si fuera un seguro temporal, usaríamos <span class="math inline">\(A_{x:\overline{n|}}^1\)</span> y <span class="math inline">\(\ddot a_{x:\overline{n|}}\)</span>.</p>
+<p>Un problema relacionado útil sería calcular la prima bruta de un seguro de vida entera con gastos iniciales fijos y gastos de renovación porcentuales, usando el principio de equivalencia.</p>
+</div>
+<div id="errores-comunes-con-explicación-del-porqué-4" class="section level2 hasAnchor">
+<h2>8. Errores comunes (con explicación del porqué)<a href="problema-05.html#errores-comunes-con-explicaci%C3%B3n-del-porqu%C3%A9-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p><strong>Usar <span class="math inline">\(T_{45}=10.5\)</span> como tiempo de pago del beneficio.</strong> Es atractivo porque <span class="math inline">\(T_x\)</span> es el tiempo exacto de muerte, pero en fully discrete el beneficio se paga al final del año de muerte: <span class="math inline">\(K_x+1=11\)</span>. Para evitarlo, identifica siempre si el producto es discreto, continuo o semi-continuo.</p></li>
+<li><p><strong>Cobrar solo 10 primas en vez de 11.</strong> Si <span class="math inline">\(T_{45}=10.5\)</span>, el asegurado está vivo al inicio del año 11, es decir, en <span class="math inline">\(t=10\)</span>, y paga la prima de ese año. Las primas son en <span class="math inline">\(t=0,1,\dots,10\)</span>, un total de 11.</p></li>
+<li><p><strong>Aplicar la comisión de 80% además de la de 10% al primer año.</strong> El enunciado dice 80% de la primera prima y 10% de primas subsecuentes. La primera comisión es <span class="math inline">\(0.8G\)</span>, no <span class="math inline">\(0.8G+0.1G\)</span>.</p></li>
+<li><p><strong>Confundir <span class="math inline">\(A_x\)</span> con <span class="math inline">\(\bar A_x\)</span>.</strong> <span class="math inline">\(A_x\)</span> corresponde a pago al final del año de muerte; <span class="math inline">\(\bar A_x\)</span> corresponde a pago al momento exacto de muerte. Aquí debe usarse <span class="math inline">\(A_{45}\)</span>, porque el seguro es fully discrete.</p></li>
+<li><p><strong>Usar <span class="math inline">\(\ddot a_{45}-1\)</span> incorrectamente.</strong> <span class="math inline">\(\ddot a_{45}\)</span> incluye la prima en <span class="math inline">\(t=0\)</span>. Las comisiones de renovación empiezan en <span class="math inline">\(t=1\)</span>, por eso su EPV es <span class="math inline">\(0.1G(\ddot a_{45}-1)\)</span>.</p></li>
+</ul>
+</div>
+<div id="respuesta-final-4" class="section level2 hasAnchor">
+<h2>9. Respuesta final<a href="problema-05.html#respuesta-final-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math display">\[  
+E[{}_0L]\approx -400.93  
+\]</span></p>
+<p>La opción correcta es:</p>
+<p><span class="math display">\[  
+\boxed{\text{D } -400}  
+\]</span></p>
+<p><strong>Takeaway:</strong> en fully discrete, muerte durante el año <span class="math inline">\(k+1\)</span> implica beneficio en <span class="math inline">\(k+1\)</span> y primas pagadas en <span class="math inline">\(0,1,\dots,k\)</span>.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="problema-04.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="problema-06.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  },
+  "themes": {
+    "theme": "united",
+    "edit": null,
+    "history": null
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
